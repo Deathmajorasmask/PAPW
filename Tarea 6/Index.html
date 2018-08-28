@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body >
+    <h1>Suma de numeros naturales consecutivos</h1>
+    <p>Calcular la Suma <b>S</b> de los <b>n</b> primeros números  naturales consecutivos</p>
+    <br>
+        <form>
+                Hasta que numero: <input type="number" id="NumNat" min="1">
+                <input type="button" onclick="SumNumNat()" value="Calcular Suma"><br>
+                <p id="suma">Resultado</p>
+                <br>
+                <p id="seg"></p>
+                <input type="button" onclick="Decision()" value="DEJA DE SEGUIRME">
+        </form>
+
+        <script language="JavaScript" type="text/javascript">
+            function SumNumNat() {
+                var n = document.getElementById("NumNat").value;
+                var suma = (n * (n+1))/2 ;
+                var e = document.getElementById("suma");
+                e.innerHTML = "Suma de numeros nat. cons. = " + suma ;
+            }
+        </script>
+
+        <script language="JavaScript" type="text/javascript">
+
+            mensaje = '[Te estoy siguiendo]> \\(ó_ó)';
+            font = 'Verdana,Arial';
+            size = 2;
+            color = 'black';
+            velocidad = 0.7;
+            apagar = false;
+            
+            n4 = (document.layers);
+            ie = (document.all);
+            n6 = (document.getElementById);
+            
+            mensaje = mensaje.split('');
+            n = mensaje.length;
+            
+            a = size*10;
+            ymouse = 0;
+            xmouse = 0;
+            props = "<font face="+font+" color="+color+" size="+size+">";
+
+            function Decision() {
+                var e = document.getElementById("seg");
+                e.innerHTML = "Creo que no quiere dejar de seguirte... Lo siento";
+                console.log("De verdad le gustas, no quiere dejarte");
+            }
+
+            function Mouse(evento)
+                { 
+                if(ie)
+                {
+                xmouse = event.x+20;
+                ymouse = event.y+20;
+                }
+                else if(n4 || n6)
+                {
+                xmouse = evento.pageX+20;
+                ymouse = evento.pageY+20;
+                }
+                }
+
+            function asigna()
+                {
+                if (ie)
+                padre.style.top = document.body.scrollTop;
+                
+                for (i = 0; i < n; i++)
+                {
+                if(n4)
+                {
+                document.layers['n4mensaje'+i].top = y[i];
+                document.layers['n4mensaje'+i].left = x[i]+(i*(a/2));
+                }
+                else if(ie)
+                {
+                iemensaje[i].style.top = y[i];
+                iemensaje[i].style.left = x[i]+(i*(a/2));
+                }
+                else if(n6)
+                {
+                eval("document.getElementById('iemensaje"+i+"').style.top = '"+y[i]+"px'");
+                eval("document.getElementById('iemensaje"+i+"').style.left = '"+(x[i]+(i*(a/2)))+"px'");
+                } 
+                }
+                }
+               
+            function ondula()
+            {
+            y[0]=Math.round(Y[0] +=((ymouse)-Y[0])*velocidad);
+            x[0]=Math.round(X[0] +=((xmouse)-X[0])*velocidad);
+            
+            for (var i = 1; i < n; i++)
+            {
+            Yaux[i] = Math.round(Y[i]);
+            Xaux[i]= Math.round(X[i]);
+            y[i] = Math.round(Y[i]=Yaux[i]+(y[i-1]-Y[i])*velocidad);
+            x[i] = Math.round(X[i]=Xaux[i]+(x[i-1]-X[i])*velocidad);
+            }
+            asigna();
+            setTimeout('ondula()',50);
+            }
+          
+            if (n4)
+            {
+            for ( i = 0; i < n; i++)
+            document.write('<layer left="0" top="0" width="+a+" name="n4mensaje'+i+'" height="+a+"><center>'+props+mensaje[i]+'</font></center></layer>');
+            }
+            else if (ie)
+            {
+            document.write('<div id="padre" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+            for (i=0; i < n; i++)
+            document.write('<div id="iemensaje" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+mensaje[i]+'</font></div>');
+            document.write('</div></div>');
+            }
+            else if (n6)
+            {
+            document.write('<div id="padre" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+            for (i = 0; i < n; i++)
+            document.write('<div id="iemensaje'+i+'" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+mensaje[i]+'</font></div>');
+            document.write('</div></div>');
+            }
+            
+            if(n4)
+            window.captureEvents(Event.MOUSEMOVE);
+            
+            if(n4)
+            window.onMouseMove = Mouse
+            else if(ie || n6)
+            document.onmousemove = Mouse;
+            y = new Array();
+            x = new Array();
+            Y = new Array();
+            X = new Array();
+            Yaux = new Array();
+            Xaux = new Array();
+            
+            for (i=0; i < n; i++)
+            {
+            y[i] = 0;
+            x[i] = 0;
+            Y[i] = 0;
+            X[i] = 0;
+            Yaux[i] = 0;
+            Xaux[i] = 0;
+            }
+         
+            window.onload = ondula;
+         
+        </script>
+    
+        <noscript>
+            Tu navegador no soporta mis JavaScript!
+        </noscript>
+
+</body>
+</html>
