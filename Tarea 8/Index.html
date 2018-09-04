@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Numeros naturales consecutivos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script> 
+</head>
+<body >
+    <h1>Suma de numeros naturales consecutivos</h1>
+    <p>Calcular la Suma <b>S</b> de los <b>n</b> primeros números  naturales consecutivos</p>
+    <br>
+        <form>
+                Hasta que numero: <input type="number" id="NumNat" min="1">
+                <input type="button" onclick="SumNumNat()" value="Calcular Suma"><br>
+                <input type="button" name="Jq" value="Calcular Suma con Jquery"> <br>
+                <p id="suma">Resultado</p>
+                
+                
+        </form>
+
+        <script language="JavaScript" type="text/javascript">
+            function SumNumNat() {
+                var n = document.getElementById("NumNat").value;
+                var suma = (+n * (+n+1))/2 ;
+                var e = document.getElementById("suma");
+                e.innerHTML = "Suma de numeros nat. cons. = " + suma ;
+            }
+        </script>
+        <script>
+                $("input[name*='Jq']").click(function(){
+                    var n = $("#NumNat").val();
+                    var suma = (+n * (+n+1))/2 ;
+                    var e = $("<p></p>").text("Suma de numeros nat. cons. con Jquery es: " +suma);
+                    $("#suma").before(e);
+                });
+        </script>
+    
+        <noscript>
+            Tu navegador no soporta mis JavaScript!
+        </noscript>
+
+</body>
+</html>
