@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pixel Game Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css" />
+    <script type="text/javascript" src="Scripts.js"></script>
+</head>
+<body>
+    <div>
+    <div class="imagBackThree"> </div>
+    <div class="grad"> </div>
+    <div class="nameContent">
+        <div>Pixel <br> <span>Game Shop</span> <br> <br> Article</div>
+    </div>
+        <form class="loginFormAddArt">
+            <input type="text" name="name" class="txtinput" placeholder="Name Article">
+            <textarea type="textarea" rows="4" cols="" name="lname" class="txtinput" placeholder="Description"></textarea>
+            <fieldset>
+                <p style="color:white;">
+                    <input type="checkbox" name="categ" value="A"> Console
+                    <input type="checkbox" name="categ" value="A"> Joystick
+                    <input type="checkbox" name="categ" value="A"> Videogame <br>
+                    <input type="checkbox" name="categ" value="A"> Other
+                </p>
+            </fieldset>
+            <input type="number" name="prec" class="txtinput" placeholder="Price">
+            <input type="number" name="unit" class="txtinput" placeholder="Units">
+            <input type="text" name="address" class="txtinput" placeholder="Address (optional)">
+            <p style="color:white;">Primary image: <input type="file" name="ImgPerf"> <br> <br>
+            Second Image: <input type="file" name="ImgPort"> <br> <br>
+            Three Image: <input type="file" name="ImgPort"> <br> <br>
+            Video: <input type="file" name="ImgPort"> <br><br>
+            <input type="checkbox" name="categ" value="A"> Keep hidden
+            </p>
+            <input type="button" name="sign" value="Publish" onclick="verCuenta()">
+        </form>
+    </div> 
+</body>
+</html>
