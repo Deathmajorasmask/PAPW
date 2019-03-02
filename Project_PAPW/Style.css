@@ -1,0 +1,339 @@
+.txtinput{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.txtinput:focus{
+    border: 3px solid #555;
+}
+
+.loginForm{
+    position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.loginForm input[type=text] input[type=password]{
+    width: 250px;
+	height: 30px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 2px;
+	color: rgb(0, 0, 0);
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.loginForm input[type=button]{
+    width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.imagBack{
+    position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(img/Games.jpg);
+	background-size: cover;
+	filter: blur(5px);
+	z-index: 0;
+}
+
+.imagBackTwo{
+    position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(img/Control.jpg);
+	background-size: cover;
+	filter: blur(5px);
+	z-index: 0;
+}
+
+.imagBackThree{
+    position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(img/MarketVideogames.png);
+	background-size: cover;
+	filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+    position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.nameContent{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.nameContent div{
+    float: left;
+	color: #fff;
+    font-family: 'Lucida Console', sans-serif;
+    text-shadow: 0 0 0.2em black ;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.nameContent span{
+    color: red !important;
+    text-shadow: 0 0 0.2em black ;
+}
+
+/*Usados en registrarse*/
+
+.loginFormLog{
+    position: absolute;
+	top: calc(30% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.loginFormLog input[type=text] input[type=password]{
+    width: 250px;
+	height: 30px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 2px;
+	color: rgb(0, 0, 0);
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.loginFormLog input[type=button]{
+    width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+/*Usada para la página principal de los articulos*/
+
+.menuListUl{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menuListUl li{
+	float: left;
+}
+
+.menuListUl li a{
+	display: block;
+	color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menuListUl li a:hover:not(.active){
+	background-color: #111;
+}
+
+.active{
+	background-color: rgb(0, 56, 161);
+}
+
+.menuBodyTranslate{
+	margin: 0;	
+}
+
+.menuContentTranslate{
+	padding:20px;
+	margin-top:30px;
+}
+
+.imgPrinc{
+	max-width:100%;
+	width:100%;
+	height:100%;
+}
+.dialogMark{
+	padding: 3px 10px;
+    border: #2B93F9 5px ridge;
+    border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+/*Barrita de buscador*/
+.menuSearch{
+	width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+	background-image: url('img/searchicon.png');
+	background-size: 10%;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.menuSearch:focus{
+	width:100%
+}
+
+/*Cuadritos de galeria*/
+.galeryDivs{
+	margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+.galeryDivs:hover{
+	border: 1px solid #777;
+}
+
+.galeryDivs img{
+	width: 100%;
+    height: auto;
+}
+
+.galeryDescription{
+	padding: 15px;
+    text-align: center;
+}
+
+.contenedor {
+	border:   thick solid rgb(255, 255, 255);
+	overflow: hidden;
+	height:   1%;
+  }
+
+/*Dar de alta un articulo*/
+.loginFormAddArt{
+    position: absolute;
+	top: calc(15% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.loginFormAddArt input[type=text] input[type=password]{
+    width: 250px;
+	height: 30px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 2px;
+	color: rgb(0, 0, 0);
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.loginFormAddArt input[type=button]{
+    width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Lucida Console', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+/*Buscar en las categorias*/
+.PanelSearch{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(199, 218, 247);
+    position: fixed;
+    top: 50px;
+    width: 15%;
+}
+
+.bodyTranslateCategory{
+	position: fixed;
+	top:50px;
+	left:210px;
+}
+
+/*Descripción de los articulos*/
+.panelGallery{
+	float: left;
+	top:50px;
+	left:1px;
+	width: 50%;
+}
+
+.panelGalleryData{
+	float: left;
+	top:50px;
+	left:700px;
+	width: 50%;
+}

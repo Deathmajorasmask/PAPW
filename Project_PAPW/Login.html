@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pixel Game Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Style.css" />
+    <script type="text/javascript" src="Scripts.js"></script>
+</head>
+<body>
+    <div class="menuListUl" style="z-index: 3;">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+        <li><a class="active" href="Login.html">Login/My Count</a></li>
+        <li><a href="MarketArticle.html">Publish Art</a></li>
+        <li><a href="ShoCart.html">Shopping cart</a></li>
+        <li><a href="History.html">History</a></li>
+    </div>
+    <div>
+    <div class="imagBack"> </div>
+    <div class="grad"> </div>
+    <div class="nameContent">
+        <div>Pixel <br> <span>Game Shop</span></div>
+    </div>
+        <form class="loginForm">
+            <input type="text" name="user" class="txtinput" placeholder="Username or Email"> <br>
+            <input type="password" name="pass" class="txtinput" placeholder="Password" > <br>
+            <p style="color:white;"> <input type="checkbox" name="rem" value="T"> Remember me <br>
+            Do you need an account? <a href="Register.html" target="_self">Sign up</a></p>
+            <input type="button" name="login" value="Login" onclick="verCuenta()">
+        </form>
+    </div> 
+</body>
+</html>
